@@ -5,7 +5,7 @@ class Student:
         self.status = status
         self.email = first + last + "@mail.weber.edu"
 
-W01234 = Student('Cameron', 'Trejo', 'Pass')
+W01234 = Student('Cameron', 'Trejo', 'Pass') # Instance of the student class
 W01235 = Student('Waldo', 'Wildcat', 'Pass')
 
 print(W01234.first, W01234.last, W01234.email, W01234.status)
