@@ -10,4 +10,6 @@
 # Object
 
 - Attribute (Something that describes the object)
-    - Carr Object (Attribute --> color ---> car1 ---> color('Blue'))
+    - Car Object (Attribute --> color ---> car1 ---> color('Blue'))
+- Behaviour (Something that the object can do)
+    - Car object (Behviour --> start)
