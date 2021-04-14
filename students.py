@@ -10,33 +10,22 @@ class Student:
     
     # Behaviour
     def printStudentInfo(self):
-        print('Full name:', self.first, self.last, '\nEmail:', self.email, '\nGrade:', self.grade, '\nAward Credit:', self.awardCredit)
-
-    def setGrade(self, grade):
-        self.grade = grade
+        print('\nFull name:', self.first, self.last, '\nEmail:', self.email, '\nGrade:', self.grade, '\nAward Credit:', self.awardCredit, '\n')
+    
+    def passingClass(self):
         if self.grade < self.passingGrade:
             self.awardCredit = False
         else:
             self.awardCredit = True
+    
+    def setGrade(self, grade):
+        self.grade = grade
+        self.passingClass()
+       
+    def extraCredit(self, points):
+        self.grade = self.grade + points
+        self.passingClass()
 
-W01234 = Student('Cameron', 'Trejo') # Instance of the student class
-W01235 = Student('Waldo', 'Wildcat')
-
-print('Start of the Semester')
-print('---------------------')
-W01234.printStudentInfo()
-W01235.printStudentInfo()
-
-print('Middle of the Semester')
-print('---------------------')
-
-W01234.setGrade(45)
-W01235.setGrade(75)
-
-W01234.printStudentInfo()
-W01235.printStudentInfo()
-
-print('End of the Semester')
-print('---------------------')
-W01234.printStudentInfo()
-W01235.printStudentInfo()
+    @classmethod
+    def setPassingGrade(cls, grade):
+        cls.passingGrade = grade
